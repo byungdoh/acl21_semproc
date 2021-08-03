@@ -1,3 +1,5 @@
+# Surprisal Estimators for Human Reading Times Need Character Models
+
 ## Introduction
 This is the code repository for the paper [Surprisal Estimators for Human Reading Times Need Character Models](https://aclanthology.org/2021.acl-long.290/), including an incremental left-corner parser and a model file trained on WSJ02-21, which can be used to generate surprisal estimates.
 
@@ -20,6 +22,10 @@ For example, if you have 20 threads available and would like to use a beam width
 ```
 -p20 -b5000
 ```
+
+## Pretrained Model
+The `model` directory contains a model file trained on Sections 02 to 21 of the Wall Street Journal corpus of the Penn Treebank (Marcus et al., 1993).
+Unzip it first with the command `gzip -d model/wsj02to21.charw.semprocmodel.gz`.
 
 ## Surprisal Estimation
 The command `make output/myfile.charw.surprisal` can be used to generate by-word surprisal estimates using the parser.
